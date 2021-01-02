@@ -1,10 +1,10 @@
 //this files runs client-side javascript
 
-fetch('http://puzzle.mead.io/puzzle').then((response) => {
+/* fetch('http://puzzle.mead.io/puzzle').then((response) => {
     response.json().then((data) => {
         console.log(data) //inspect with console dev tools
     })
-})
+}) */
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input') //whatever we enter in the search box

@@ -2,7 +2,8 @@ const request = require('postman-request')
 
 const geocode = (address, callback) => {
     // CREATE DYNAMIC URL USING address
-    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoiamdyaW1hbGEiLCJhIjoiY2toMTNjcGJnMTNhNDJ3cGcybjd2MnBuMSJ9.Yj7KQELEs9_bNr22v8ayfw&limit=1'
+    const mapboxApiKey = process.env.MAPBOX_API_KEY
+    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token='+mapboxApiKey+'&limit=1'
 
     request({
         url,
